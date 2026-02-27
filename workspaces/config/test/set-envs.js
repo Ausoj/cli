@@ -7,7 +7,6 @@ const { execPath } = process
 const cwd = process.cwd()
 const globalPrefix = join(cwd, 'global')
 const localPrefix = join(cwd, 'local')
-const NODE = execPath
 
 const npmPath = '{path}'
 const npmBin = join(npmPath, 'bin/npm-cli.js')
@@ -24,7 +23,6 @@ t.test('set envs that are not defaults and not already in env', t => {
   const envConf = Object.create(defaults)
   const cliConf = Object.create(envConf)
   const extras = {
-    NODE,
     INIT_CWD: cwd,
     EDITOR: 'vim',
     HOME: undefined,
@@ -79,7 +77,6 @@ t.test('set envs that are not defaults and not already in env, array style', t =
   const envConf = Object.create(defaults)
   const cliConf = Object.create(envConf)
   const extras = {
-    NODE,
     INIT_CWD: cwd,
     EDITOR: 'vim',
     HOME: undefined,
@@ -131,7 +128,6 @@ t.test('set envs that are not defaults and not already in env, boolean edition',
   const envConf = Object.create(defaults)
   const cliConf = Object.create(envConf)
   const extras = {
-    NODE,
     INIT_CWD: cwd,
     EDITOR: 'vim',
     HOME: undefined,
@@ -210,7 +206,6 @@ t.test('dont set configs marked as envExport:false', t => {
   const envConf = Object.create(defaults)
   const cliConf = Object.create(envConf)
   const extras = {
-    NODE,
     INIT_CWD: cwd,
     EDITOR: 'vim',
     HOME: undefined,

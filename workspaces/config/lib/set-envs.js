@@ -107,7 +107,7 @@ const setEnvs = (config) => {
   // this doesn't have a full definition so we manually export it here
   env.npm_config_npm_version = cliConf['npm-version'] || 'unknown'
   env.npm_execpath = config.npmBin
-  env.NODE = env.npm_node_execpath = config.execPath
+  env.npm_node_execpath = config.execPath
 }
 
 module.exports = setEnvs
